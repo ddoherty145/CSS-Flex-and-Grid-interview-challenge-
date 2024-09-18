@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Finland</title>
+  <style>
+
+    html{
+        height:100%;
+    }
+
+    *{
+        margin: 0;
+    }
+    h1{
+        margin-top: 20px;
+        font-size: 3rem;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 21px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .population{
+        background-image: url(images/finland-8.jpg);
+        grid-area: p;
+        display:flex;
+        align-items:flex-start;
+        justify-content: flex-end;
+        color:white;
+        flex-direction: column;
+        background-size: cover;;
+    }
+    h2{
+        font-size:xx-large;
+    }
+    p{
+        font-size:large;
+    }
+    .dashboard{
+        display: grid;
+        grid-gap: 20px;
+        width: 800px;
+        height: 600px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+                             "p n n n"
+                             "d c g e";
+    }
+
+    .dashboard > div{
+        padding: 1em;
+        height: 200px;
+        font-size: medium;
+    }
+
+    .welcome{
+        grid-area: n;
+        background-image: url(images/finland-2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:flex;
+        align-items:flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        color:white;
+    }
+
+    .gdp{
+        grid-area: d;
+        background-image: url(images/finland-3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:flex;
+        align-items:flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        color:white;
+    }
+
+    .code{
+        grid-area: c;
+        background-image: url(images/finland-4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:flex;
+        align-items:flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        color:white;
+    }
+
+    .govt{
+        grid-area:g;
+        background-image: url(images/finland-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:flex;
+        align-items:flex-start;
+        justify-content: flex-end;
+        flex-direction: column;
+        color:white;
+    }
+    .news{
+        grid-area: e;
+        background-image: url(images/finland-5.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:flex;
+        align-items:flex-start;
+        justify-content: center;
+        flex-direction: column;
+        color:white;
+
+    }
+    .news > label{
+        display:flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin:0.5em;
+    }
+    .news > input{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    button{
+        display:flex;
+        align-self: flex-end;
+        margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h1 class="title">Finland</h1>
+
+    <div class="population grid-cell">
+        <h2>population: </h2>
+        <p>5,536,146</p>
+    </div>
+    
+    <div class="welcome grid-cell">
+      <h2>Welcome</h2>
+      <p>Natural Resources, Economic Initiatives, Community Spaces</p>
+    </div>
+
+    <div class="gdp grid-cell">
+      <h2>GDP</h2>
+      <p>257 billion</p>
+    </div>
+
+    <div class="code grid-cell">
+      <h2>Calling Code</h2>
+      <p>+ 358</p>
+    </div>
+
+    <div class="govt grid-cell">
+      <h2>Government</h2>
+      <p>Unitary parliamentary republic</p>
+    </div>
+
+    <div class="news grid-cell">
+      <h2>News</h2>
+      <label for="name">Name:</label>
+      <input id="name" type="text" placeholder="name"/>
+      <label for="email">Email:</label>
+      <input id="email" type="email" placeholder="email"/>
+      <button>Send</button>
+    </div>
+
+  </div>
+  
+</body>
+</html>
